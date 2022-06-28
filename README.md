@@ -9,4 +9,4 @@
 ![Screenshot](https://github.com/Ikyrillos/imges/blob/main/signin.jpeg)
 
 # Register screen
-![Screenshot](https://github.com/Ikyrillos/imges/blob/main/Register.jpeg)
+![Screenshot](https://github.com/Ikyrillos/imges/blob/main/register.jpeg)
