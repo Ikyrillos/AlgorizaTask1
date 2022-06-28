@@ -118,7 +118,7 @@ class RegisterScreen extends StatelessWidget {
                         controller: email,
                         type: TextInputType.emailAddress,
                         isPassword: false,
-                        hint: 'EG. example@email.com'),
+                        hint: '  EX. example@email.com'),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
@@ -139,7 +139,7 @@ class RegisterScreen extends StatelessWidget {
                             height: 50,
                             controller: email,
                             isPassword: false,
-                            hint: 'EG. 812345678',
+                            hint: 'EX. 812345678',
                             type: TextInputType.phone,
                             prefixWidget: CountryCodePicker(
                               alignLeft: false,
