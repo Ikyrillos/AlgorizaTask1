@@ -137,11 +137,19 @@ class RegisterScreen extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 30),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
                         child: LoginTextButton(
                           buttonName: 'Sign in here',
                           description: 'Has any accounts?',
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => LoginScreen(),
+                              ),
+                            );
+                          },
                         ),
                       ),
                       const SizedBox(
@@ -168,13 +176,18 @@ class RegisterScreen extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class LoginTextButton extends StatelessWidget {
-  const LoginTextButton(
-      {Key? key, required this.buttonName, required this.description})
+  LoginTextButton(
+      {Key? key,
+      required this.buttonName,
+      required this.description,
+      required this.onPressed})
       : super(key: key);
 
   final String description;
   final String buttonName;
+  VoidCallback? onPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -188,7 +201,7 @@ class LoginTextButton extends StatelessWidget {
           ),
         ),
         TextButton(
-            onPressed: () {},
+            onPressed: onPressed,
             child: Text(
               buttonName,
               style: const TextStyle(

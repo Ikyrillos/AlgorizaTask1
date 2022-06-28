@@ -161,14 +161,22 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   Column(
-                    children: const [
+                    children: [
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 30),
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
                         child: LoginTextButton(
                             buttonName: 'Register',
-                            description: "Doesn't Have any account?"),
+                            description: "Doesn't Have any account?",
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => RegisterScreen(),
+                                ),
+                              );
+                            }),
                       ),
-                      TermsNotifyText(
+                      const TermsNotifyText(
                         text:
                             'use the application according to policy rules, Any kinds of Violation will be subject to sanctions',
                       ),
