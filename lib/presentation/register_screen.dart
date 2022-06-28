@@ -153,6 +153,21 @@ class RegisterScreen extends StatelessWidget {
                               textOverflow: TextOverflow.ellipsis,
                             ),
                           ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          const TitleOfFormFiled(text: 'Password'),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          DefaultFormField(
+                            suffix: Icons.password,
+                            height: 50,
+                            controller: email,
+                            isPassword: false,
+                            label: 'Password',
+                            type: TextInputType.text,
+                          ),
                         ],
                       ),
                     ),
@@ -167,7 +182,7 @@ class RegisterScreen extends StatelessWidget {
                   ),
                   const LoginOutlinedButton(),
                   const SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
                   Column(
                     children: [
@@ -187,7 +202,7 @@ class RegisterScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(
-                        height: 10,
+                        height: 5,
                       ),
                       Column(
                         children: [
@@ -206,45 +221,6 @@ class RegisterScreen extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-// ignore: must_be_immutable
-class LoginTextButton extends StatelessWidget {
-  LoginTextButton(
-      {Key? key,
-      required this.buttonName,
-      required this.description,
-      required this.onPressed,
-      this.fontsize})
-      : super(key: key);
-  final double? fontsize;
-  final String description;
-  final String buttonName;
-  VoidCallback? onPressed;
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          description,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: fontsize ?? 14,
-          ),
-        ),
-        TextButton(
-            onPressed: onPressed,
-            child: Text(
-              buttonName,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: fontsize ?? 13,
-              ),
-            )),
-      ],
     );
   }
 }

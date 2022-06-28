@@ -64,6 +64,7 @@ class DefaultFormField extends StatelessWidget {
     this.prefix,
     this.width,
     this.height,
+    this.suffix,
   }) : super(key: key);
 
   double? width;
@@ -114,7 +115,9 @@ class DefaultFormField extends StatelessWidget {
               ? IconButton(
                   icon: Icon(suffix),
                   onPressed: () {
-                    suffixPressed!();
+                    if(suffixPressed != null) {
+                      suffixPressed!();
+                    }
                   },
                 )
               : null,

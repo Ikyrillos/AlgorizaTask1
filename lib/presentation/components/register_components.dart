@@ -136,3 +136,43 @@ class LoginOutlinedButton extends StatelessWidget {
     );
   }
 }
+
+
+// ignore: must_be_immutable
+class LoginTextButton extends StatelessWidget {
+  LoginTextButton(
+      {Key? key,
+      required this.buttonName,
+      required this.description,
+      required this.onPressed,
+      this.fontsize})
+      : super(key: key);
+  final double? fontsize;
+  final String description;
+  final String buttonName;
+  VoidCallback? onPressed;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          description,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: fontsize ?? 14,
+          ),
+        ),
+        TextButton(
+            onPressed: onPressed,
+            child: Text(
+              buttonName,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: fontsize ?? 13,
+              ),
+            )),
+      ],
+    );
+  }
+}

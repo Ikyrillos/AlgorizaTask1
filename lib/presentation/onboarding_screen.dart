@@ -1,3 +1,4 @@
+import 'package:algoriza_task1/presentation/components/register_components.dart';
 import 'package:algoriza_task1/presentation/login_screen.dart';
 import 'package:algoriza_task1/presentation/register_screen.dart';
 import 'package:flutter/material.dart';
