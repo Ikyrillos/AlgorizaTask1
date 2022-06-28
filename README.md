@@ -1,3 +1,3 @@
 # algoriza_task1
 
-# Task is Complete
+# Task 1 is Complete
