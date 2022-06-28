@@ -17,7 +17,41 @@ class RegisterScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const TopPageBackground(height: 80),
+            Stack(children: [
+              const TopPageBackground(height: 80),
+              // add back button here
+              Positioned(
+                top: 0,
+                left: 0,
+                right: 0,
+                child: SizedBox(
+                  height: 80,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        icon: Container(
+                          width: 60,
+                          height: 60,
+                          decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: const Icon(
+                            Icons.arrow_back,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(),
+                    ],
+                  ),
+                ),
+              ),
+            ]),
             Padding(
               padding: const EdgeInsets.only(
                 top: 16,
@@ -182,9 +216,10 @@ class LoginTextButton extends StatelessWidget {
       {Key? key,
       required this.buttonName,
       required this.description,
-      required this.onPressed})
+      required this.onPressed,
+      this.fontsize})
       : super(key: key);
-
+  final double? fontsize;
   final String description;
   final String buttonName;
   VoidCallback? onPressed;
@@ -195,18 +230,18 @@ class LoginTextButton extends StatelessWidget {
       children: [
         Text(
           description,
-          style: const TextStyle(
+          style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 14,
+            fontSize: fontsize ?? 14,
           ),
         ),
         TextButton(
             onPressed: onPressed,
             child: Text(
               buttonName,
-              style: const TextStyle(
+              style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 13,
+                fontSize: fontsize ?? 13,
               ),
             )),
       ],

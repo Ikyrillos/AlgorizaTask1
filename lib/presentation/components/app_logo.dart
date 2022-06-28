@@ -21,7 +21,7 @@ class AppLogo extends StatelessWidget {
         Text(
           'Krave',
           style: TextStyle(
-            color: Color(0xff03B1A9),
+            color: Color(0xff24B6AE),
             fontFamily: 'hongkong',
             fontSize: 35,
           ),

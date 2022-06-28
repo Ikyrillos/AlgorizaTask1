@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:algoriza_task1/presentation/login_screen.dart';
 // ignore: unused_import
 import 'package:algoriza_task1/presentation/onboarding_screen.dart';
 
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LoginScreen(),
+      home: const OnboardingScreen(title: 'Onboarding'),
     );
   }
 }
