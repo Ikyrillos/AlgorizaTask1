@@ -118,7 +118,7 @@ class RegisterScreen extends StatelessWidget {
                         controller: email,
                         type: TextInputType.emailAddress,
                         isPassword: false,
-                        label: 'EG. example@email.com'),
+                        hint: 'EG. example@email.com'),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
@@ -139,7 +139,7 @@ class RegisterScreen extends StatelessWidget {
                             height: 50,
                             controller: email,
                             isPassword: false,
-                            label: 'EG. 812345678',
+                            hint: 'EG. 812345678',
                             type: TextInputType.phone,
                             prefixWidget: CountryCodePicker(
                               alignLeft: false,
@@ -165,14 +165,18 @@ class RegisterScreen extends StatelessWidget {
                             height: 50,
                             controller: email,
                             isPassword: false,
-                            label: 'Password',
+                            hint: 'Password',
                             type: TextInputType.text,
                           ),
                         ],
                       ),
                     ),
                   ),
-                  const LoginButton(buttonName: 'Register'),
+                  LoginButton(
+                    buttonName: 'Register',
+                    buttonStyle: OutlinedButton.styleFrom(
+                        fixedSize: Size(MediaQuery.of(context).size.width, 40)),
+                  ),
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 5),
                     child: const Text('or',

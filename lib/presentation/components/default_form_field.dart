@@ -57,7 +57,8 @@ class DefaultFormField extends StatelessWidget {
     required this.controller,
     required this.type,
     required this.isPassword,
-    required this.label,
+    this.label,
+    this.hint,
     this.validate,
     this.onChange,
     this.prefixWidget,
@@ -74,7 +75,8 @@ class DefaultFormField extends StatelessWidget {
   // Function? onSubmit,
   void Function(String)? onChange;
   String? Function(String?)? validate;
-  String label;
+  String? label;
+  String? hint;
 
   /// can be iconData or widget
   IconData? prefix;
@@ -108,6 +110,7 @@ class DefaultFormField extends StatelessWidget {
         onChanged: onChange,
         onTap: onTap,
         decoration: InputDecoration(
+          hintText: hint ,
           labelText: label,
           border: const OutlineInputBorder(),
           prefixIcon: prefix == null ? prefixWidget : Icon(prefix),

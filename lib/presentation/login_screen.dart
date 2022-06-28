@@ -92,7 +92,7 @@ class LoginScreen extends StatelessWidget {
                             height: 50,
                             controller: phone,
                             isPassword: false,
-                            label: 'EG. 812345678',
+                            hint: 'EG. 812345678',
                             type: TextInputType.phone,
                             prefixWidget: CountryCodePicker(
                               alignLeft: false,

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -19,9 +18,6 @@ class TitleText extends StatelessWidget {
   }
 }
 
-
-
-
 class TopPageBackground extends StatelessWidget {
   const TopPageBackground({
     Key? key,
@@ -41,8 +37,6 @@ class TopPageBackground extends StatelessWidget {
   }
 }
 
-
-
 class TitleOfFormFiled extends StatelessWidget {
   const TitleOfFormFiled({
     Key? key,
@@ -53,7 +47,7 @@ class TitleOfFormFiled extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
-      children:  [
+      children: [
         Text(
           text,
           style: const TextStyle(
@@ -65,20 +59,21 @@ class TitleOfFormFiled extends StatelessWidget {
   }
 }
 
-
 class LoginButton extends StatelessWidget {
-  const LoginButton({Key? key, required this.buttonName}) : super(key: key);
+  const LoginButton({Key? key, required this.buttonName, this.buttonStyle}) : super(key: key);
   final String buttonName;
+  final ButtonStyle? buttonStyle;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8),
       child: ElevatedButton(
+        style: buttonStyle,
         onPressed: () {},
         child: SizedBox(
           height: 43,
           width: MediaQuery.of(context).size.width,
-          child:  Center(
+          child: Center(
             child: Text(buttonName,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
@@ -136,7 +131,6 @@ class LoginOutlinedButton extends StatelessWidget {
     );
   }
 }
-
 
 // ignore: must_be_immutable
 class LoginTextButton extends StatelessWidget {
