@@ -80,10 +80,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     bottom: 0,
                     left: 0,
                     right: 0,
-                    top: 100,
+                    top: 110,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
+
                         Text(
                           'Get food delivery in your \n  doorstep asap!',
                           style: TextStyle(
@@ -100,7 +101,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     bottom: 0,
                     left: 0,
                     right: 0,
-                    top: 220,
+                    top: 230,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
