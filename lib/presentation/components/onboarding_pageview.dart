@@ -31,7 +31,7 @@ class OnboardingPageView extends StatelessWidget {
             Image.asset(
               'assets/images/bonbon-web-design-2.png',
               fit: BoxFit.fill,
-              // height: 100,
+              height: 80,
               // width: 60,
             ),
           ],

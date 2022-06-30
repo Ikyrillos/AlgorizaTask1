@@ -3,6 +3,7 @@ import 'package:algoriza_task1/presentation/screens/login_screen.dart';
 import 'package:algoriza_task1/presentation/screens/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:algoriza_task1/presentation/components/onboarding_pageview.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key, required this.title}) : super(key: key);
@@ -63,6 +64,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: Stack(
                 children: [
                   OnboardingPageView(controller: controller),
+                  // dot indicator
+                  Positioned(
+                    left: MediaQuery.of(context).size.width / 2.15,
+                    right: 0,
+                    top: 303,
+                    child: SmoothPageIndicator(
+                        controller: controller!, // PageController
+                        count: 2,
+                        effect: const WormEffect(), // your preferred effect
+                        onDotClicked: (index) {}),
+                  ),
                   // put text under the image in the stack
                   Positioned(
                     bottom: 0,
