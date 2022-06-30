@@ -1,7 +1,6 @@
 import 'package:algoriza_task1/presentation/components/default_form_field.dart';
-import 'package:algoriza_task1/presentation/components/terms_notify_text.dart';
-import 'package:algoriza_task1/presentation/components/register_components.dart';
-import 'package:algoriza_task1/presentation/register_screen.dart';
+import 'package:algoriza_task1/presentation/components/app_components.dart';
+import 'package:algoriza_task1/presentation/screens/register_screen.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -14,6 +13,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
+        reverse: true,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -26,6 +26,7 @@ class LoginScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
+                  // Welcome Quote
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
@@ -38,6 +39,7 @@ class LoginScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  // row of sign in and help iconButton
                   Padding(
                     padding:
                         const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
@@ -63,6 +65,7 @@ class LoginScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  // phone number country picker textFormField
                   Padding(
                     padding: const EdgeInsets.symmetric(
                       vertical: 10,
@@ -74,17 +77,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       child: Column(
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: const [
-                              Text(
-                                'Phone Number',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                ),
-                              ),
-                            ],
-                          ),
+                          const TitleOfFormField(text: 'Phone Number'),
                           const SizedBox(
                             height: 5,
                           ),
@@ -110,6 +103,8 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+
+                  // sign in buttons
                   Column(
                     children: const [
                       LoginButton(
@@ -160,6 +155,8 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+
+                  // Register button amd terms and conditions warning
                   Column(
                     children: [
                       Padding(

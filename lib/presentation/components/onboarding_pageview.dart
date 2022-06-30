@@ -25,7 +25,7 @@ class OnboardingPageView extends StatelessWidget {
           controller: controller,
           children: [
             Image.asset(
-              'assets/images/business-3d-happy-robot-assistant-waving-hello.png',
+              'assets/images/glossy-e-commerce.png',
               fit: BoxFit.fill,
             ),
             Image.asset(

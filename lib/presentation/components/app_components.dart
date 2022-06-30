@@ -37,8 +37,8 @@ class TopPageBackground extends StatelessWidget {
   }
 }
 
-class TitleOfFormFiled extends StatelessWidget {
-  const TitleOfFormFiled({
+class TitleOfFormField extends StatelessWidget {
+  const TitleOfFormField({
     Key? key,
     required this.text,
   }) : super(key: key);
@@ -60,7 +60,8 @@ class TitleOfFormFiled extends StatelessWidget {
 }
 
 class LoginButton extends StatelessWidget {
-  const LoginButton({Key? key, required this.buttonName, this.buttonStyle}) : super(key: key);
+  const LoginButton({Key? key, required this.buttonName, this.buttonStyle})
+      : super(key: key);
   final String buttonName;
   final ButtonStyle? buttonStyle;
   @override
@@ -167,6 +168,59 @@ class LoginTextButton extends StatelessWidget {
               ),
             )),
       ],
+    );
+  }
+}
+
+
+
+class AppLogo extends StatelessWidget {
+  const AppLogo({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: const [
+        Text(
+          '7',
+          style: TextStyle(
+              fontFamily: 'hongkong',
+              fontSize: 34,
+              color: Color(0xffE8B777),
+              fontWeight: FontWeight.bold),
+        ),
+        Text(
+          'Krave',
+          style: TextStyle(
+            color: Color(0xff24B6AE),
+            fontFamily: 'hongkong',
+            fontSize: 35,
+          ),
+        )
+      ],
+    );
+  }
+}
+
+
+class TermsNotifyText extends StatelessWidget {
+  const TermsNotifyText({
+    Key? key,
+    required this.text,
+  }) : super(key: key);
+  final String text;
+  @override
+  Widget build(BuildContext context) {
+    return  Center(
+      child: Text(
+        text,
+        style: const TextStyle(fontSize: 14, color: Colors.grey),
+        maxLines: 2,
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }

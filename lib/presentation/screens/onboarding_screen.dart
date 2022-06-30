@@ -1,8 +1,7 @@
-import 'package:algoriza_task1/presentation/components/register_components.dart';
-import 'package:algoriza_task1/presentation/login_screen.dart';
-import 'package:algoriza_task1/presentation/register_screen.dart';
+import 'package:algoriza_task1/presentation/components/app_components.dart';
+import 'package:algoriza_task1/presentation/screens/login_screen.dart';
+import 'package:algoriza_task1/presentation/screens/register_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:algoriza_task1/presentation/components/app_logo.dart';
 import 'package:algoriza_task1/presentation/components/onboarding_pageview.dart';
 
 class OnboardingScreen extends StatefulWidget {

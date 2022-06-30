@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // ignore: unused_import
-import 'package:algoriza_task1/presentation/onboarding_screen.dart';
+import 'package:algoriza_task1/presentation/screens/onboarding_screen.dart';
 
 void main() {
   runApp(const MyApp());

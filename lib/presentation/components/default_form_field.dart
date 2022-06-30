@@ -66,6 +66,7 @@ class DefaultFormField extends StatelessWidget {
     this.width,
     this.height,
     this.suffix,
+    this.onFieldSubmitted
   }) : super(key: key);
 
   double? width;
@@ -85,6 +86,7 @@ class DefaultFormField extends StatelessWidget {
   Function? suffixPressed;
   Widget? prefixWidget;
   void Function()? onTap;
+  void Function(String)? onFieldSubmitted;
   // bool enabled = true,
   var readOnly = false;
   @override
@@ -103,14 +105,12 @@ class DefaultFormField extends StatelessWidget {
         controller: controller,
         keyboardType: type,
         obscureText: isPassword,
-        // onFieldSubmitted: (S) {
-        //   onSubmit!(S);
-        // },
+        onFieldSubmitted: onFieldSubmitted,
 
         onChanged: onChange,
         onTap: onTap,
         decoration: InputDecoration(
-          hintText: hint ,
+          hintText: hint,
           labelText: label,
           border: const OutlineInputBorder(),
           prefixIcon: prefix == null ? prefixWidget : Icon(prefix),
@@ -118,7 +118,7 @@ class DefaultFormField extends StatelessWidget {
               ? IconButton(
                   icon: Icon(suffix),
                   onPressed: () {
-                    if(suffixPressed != null) {
+                    if (suffixPressed != null) {
                       suffixPressed!();
                     }
                   },
